@@ -1,0 +1,73 @@
+$maincolor: black;
+$secondcolor: white;
+
+@mixin white-text-black-bg {
+    color: $secondcolor;
+    background-color: $maincolor;
+}
+
+@mixin black-test-white-bg {
+    color: $maincolor;
+    background-color: $secondcolor;
+}
+
+nav {
+    @include white-text-black-bg;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+
+    a {
+        @include white-text-black-bg;
+
+        div {
+            margin: 10px;
+          
+            
+            
+        }
+    }
+}
+
+div {
+    form {
+        input {
+            @include white-text-black-bg;
+            padding: 10px;
+            font-size: 1.5em;
+            margin: 15px;
+            border: none;
+            width: 300px;
+            text-align: center;
+            
+
+            &[type="submit"]:hover {
+                @include black-test-white-bg;
+            }
+        }
+    }
+}
+
+.submit {
+  width: 1020px;
+    justify-content: center;
+}
+
+
+
+
+img {
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color:coral;
+}
